@@ -1,0 +1,89 @@
+
+.img-fundo{
+    background-image: url('http://ottawaperks.com/uploads/bg-slide-01.jpg') ;
+    background-repeat: no-repeat;
+    background-size:100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    
+    overflow: auto;
+    
+    position: absolute;
+    text-align: center;
+    background-size: cover;
+
+}
+
+/*.menu {
+    background: black;
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    margin-top:-20px;
+}
+
+.navbar {
+    background: #FFF;
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    
+}
+
+.nav-link:hover{
+    border-bottom: 2px solid rgb(247, 142, 6);
+    background-color: rgba(8, 8, 8, 0.377);
+    color:#ccc;
+}
+.nav-link {
+    color: rgb(252, 253, 253);
+    
+}
+*/
+
+.navbar{
+    border-radius:0%;
+}
+.size_logo{
+    margin-top:-10px;
+    height: 2.3em;
+}
+.banner{
+    margin-top:53px; 
+}
+@media only screen and (max-width: 1368px){
+    .banner img {
+        width: 100%;
+    }
+}
+
+
+.search{
+    margin-top:7px;
+}
+.btn_entrar{
+    margin-top:7px;
+    margin-left: -57px
+}
+
+.icon-size{
+    font-size: 20px;
+    color:rgb(14, 13, 13);
+    
+}
+
+.bg-carrinho{
+    background-color: #f78d08;
+}
+.bg-carrinho:hover{
+    background-color: #ccc;
+    color:#ccc;
+}
+.btn-primary{
+    background-color: #01a7fb;
+
+}
