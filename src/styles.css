@@ -1,30 +1,207 @@
-/* You can add global styles to this file, and also import other style files */
-.e_h5 {
-    color:#999
-}
 
-.e_h4 {
-    color:#555
-}
-
-.e_h3 {
-    color: #555
-}
-
-.card img {
-    height: 200px;
-}
-
-.e_secao {
-    margin-top: 30px;
-    margin-bottom: 30px
-}
-
-.e_preco {
-    color: #f60;
-    font-weight: bold;
-    font-size: 20px
+.container-bg-black {
+    margin-top:3%;
+    margin-bottom:3%;
+    padding-top: 1%;
+    background: rgba(3, 3, 3, 0.57);
 }
 
 
+.title{
+    margin-top: -10px;
+    background-color:rgb(0, 0, 0);
+    color: white;
+    height: 20px;
+}
 
+.ingresso{
+    display: block;
+    margin: auto auto;
+    width: 895px;
+    border: solid #000 1px;
+
+}
+
+
+/*==============MAP=============*/
+agm-map {
+    height: 320px;
+    width:90%;
+}
+
+
+/*=================GERAR INGRESSOS==================*/
+
+
+
+@media print {
+    
+        body {
+            margin:0;
+            padding:0;
+            line-height: 1.4em;
+        }
+        div {
+           max-width: 100%;
+        }
+        #printable, #printable * {
+          visibility: visible;
+        }
+        #printable {
+          position: fixed;
+          left: 0;
+          top: 0;
+        }
+        button{
+            visibility: hidden;
+        }
+      }
+
+
+
+
+/*================BOTAO===========*/
+
+.btn-outline {
+    background-color: transparent;
+    color: inherit;
+    transition: all .5s;
+}
+
+.btn-primary.btn-outline {
+    color: #428bca;
+}
+
+.btn-success.btn-outline {
+    color: #5cb85c;
+}
+
+.btn-info.btn-outline {
+    color: #5bc0de;
+}
+
+.btn-warning.btn-outline {
+    color: #f0ad4e;
+}
+
+.btn-danger.btn-outline {
+    color: #d9534f;
+}
+
+
+.btn-success.btn-outline:hover{
+    background-color: #5cb85c;
+    color: #fff;
+}
+.btn-primary.btn-outline:hover{
+    background-color: #428bca;
+    color: #fff;
+}
+.btn-info.btn-outline:hover{
+    background-color: #5bc0de;
+    color: #fff;
+}
+.btn-warning.btn-outline:hover{
+    background-color:#f0ad4e ;
+    color: #fff;
+}
+.btn-danger.btn-outline:hover {
+    color: #fff;
+}
+
+
+
+/*===================TELA LOGIN====================*/
+.form-signin
+{
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.form-signin .form-signin-heading, .form-signin .checkbox
+{
+    margin-bottom: 10px;
+}
+.form-signin .checkbox
+{
+    font-weight: normal;
+    color: white;
+}
+.form-signin .form-control
+{
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.form-signin .form-control:focus
+{
+    z-index: 2;
+}
+.form-signin input[type="text"]
+{
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"]
+{
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.account-wall
+{
+    margin-top: 20px;
+    padding: 40px 0px 20px 0px;
+    background-color: rgba(0, 0, 0, 0.65);
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.login-title
+{
+    color: #555;
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+}
+.profile-img
+{
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.need-help
+{
+    margin-top: 10px;
+    color: white;
+}
+.new-account
+{
+    display: block;
+    margin-top: 10px;
+    
+}
+
+
+/*===============RODAPE===================*/
+
+footer{
+
+    background-color: rgb(247, 142, 6);
+    color:white;
+    bottom:0;
+
+    display: block;
+    position: relative;
+
+    clear: both;
+}

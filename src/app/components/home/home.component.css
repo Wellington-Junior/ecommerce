@@ -1,9 +1,4 @@
-.container-bg-black {
-    margin-top:3%;
-    margin-bottom:3%;
-    padding-top: 3%;
-    background: rgba(3, 3, 3, 0.57);
-}
+
 thumbnail{
     padding: 0px;
     /*background-color: rgba(255, 255, 255, 0.75);*/
@@ -18,6 +13,9 @@ p{
     line-height: 1.5;
     
 }
+.thumbnail{
+    background-color: rgba(255, 255, 255, 0.87)
+}
 
 .bg-white{
     background-color: white;
@@ -30,54 +28,11 @@ p{
     padding: 0px;
 }
 
-.btn-outline {
-    background-color: transparent;
-    color: inherit;
-    transition: all .5s;
-}
 
-.btn-primary.btn-outline {
-    color: #428bca;
+.secao {
+    margin-top: 30px;
+    margin-bottom: 30px
 }
-
-.btn-success.btn-outline {
-    color: #5cb85c;
-}
-
-.btn-info.btn-outline {
-    color: #5bc0de;
-}
-
-.btn-warning.btn-outline {
-    color: #f0ad4e;
-}
-
-.btn-danger.btn-outline {
-    color: #d9534f;
-}
-
-
-.btn-success.btn-outline:hover{
-    background-color: #5cb85c;
-    color: #fff;
-}
-.btn-primary.btn-outline:hover{
-    background-color: #428bca;
-    color: #fff;
-}
-.btn-info.btn-outline:hover{
-    background-color: #5bc0de;
-    color: #fff;
-}
-.btn-warning.btn-outline:hover{
-    background-color:#f0ad4e ;
-    color: #fff;
-}
-.btn-danger.btn-outline:hover {
-    color: #fff;
-}
-
-
 
 
 

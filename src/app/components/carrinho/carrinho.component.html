@@ -1,3 +1,69 @@
-<p>
-  carrinho works!
-</p>
+<app-topo></app-topo>
+<div class="container container-bg-black" >
+    
+    <!--<div class="row">
+      <div class="col-md-12">
+        <h3 class="titulo_h3"> CARINHO </h3>
+      </div>
+    </div>-->
+  
+    <div class="row">
+  
+      <div class="col-md-12 col-sm-12">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="table-responsive">
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th>Evento</th>
+                    <th>Tipo</th>
+                    <th>Quantidade</th>
+                    <th>Valor Unitário</th>
+                    <th>Valor Total</th>
+                    <th>Excluir</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of ingressos; let i = index;">
+                    <td>
+                      <div class="col-md-3 col-sm-6">
+                        <div class="thumbnail">
+                          <img [src]="item.imagem">
+                        </div>
+                      </div>
+                      <h3>{{item.artista}}</h3>
+                    </td>
+                    <td>{{item.nome}}</td>
+                    <td>{{item.qtd}}</td>
+                    <td>{{item.valor | currency:'BRL':true:'1.2'}}</td>
+                    <td>{{item.qtd * item.valor | currency:'BRL':true:'1.2'}}</td>
+                    <td>
+                      <a class="btn btn-danger" (click)="removerItemTab(item,i)">
+                        <span class="fa fa-trash-o"></span>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="5">
+                      <p class="text-right">Sub-Total</p>
+                    </td>
+                    <td colspan="1">{{ total | currency:'BRL':true:'1.2' }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="panel-footer">
+
+              <button class="btn btn-default" (click)="limparCarrinho()"><span class="fa fa-trash"></span> Limpar Carrinho</button>
+              <a [routerLink]="['/']" class="btn btn-warning"><span class="fa fa-plus"></span> Continuar Comprando</a>
+              <button (click)="finalizarCompra()" class="btn btn-success"><span class="fa fa-check"></span> Finalizar Compra</button>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-rodape></app-rodape>

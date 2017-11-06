@@ -1,0 +1,30 @@
+.navbar{
+    border-radius:0%;
+}
+.size_logo{
+    margin-top:-10px;
+    height: 2.3em;
+}
+.banner{
+    margin-top:65px; 
+}
+@media only screen and (max-width: 1368px){
+    .banner img {
+        width: 89.5%;
+    }
+}
+@media only screen and (max-width:724px){
+    .banner img{
+        width: 100%;
+        margin-top:-12px;
+    }
+}
+.bg-carrinho{
+    background-color: #f78d08;
+    color:black;
+}
+
+.icon-size{
+    font-size: 20px;
+    color:rgb(14, 13, 13);   
+}

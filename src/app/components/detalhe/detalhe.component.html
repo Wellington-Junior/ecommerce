@@ -1,0 +1,106 @@
+<app-topo></app-topo>
+<div class="container container-bg-black">
+  
+    <div class="thumbnail">
+
+        <div class="row">
+            <div class="col-md-4 col-sm-8">
+              <div class="thumbnail">
+                <img [src]="imagemUrl">
+                <div class="title">
+                    <h4>{{evento.artista}}</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 col-sm-8">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <div class="table-responsive" >
+                    <table class="table table-condensed">
+                      <thead>
+                        <tr>
+                          <th>Tipo</th>
+                          <th>Quantidade</th>
+                          <th>Valor Unitário</th>
+                          <th>Valor Total</th>
+                          <th>Comprar</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let tipo of tipos;let i=index">
+                          <td>{{tipo.tipo}}</td>
+                          <td>
+                            <select #t class="form-control" (change)="0">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                  </select>
+                          </td>
+                          <td>{{tipo.valor | currency:'BRL':true:'1.2'}}</td>
+                          <td>{{ t.value * tipo.valor | currency:'BRL':true:'1.2' }}</td>
+                          <td><a [routerLink]="['/carrinho']" (click)="getValue(tipo.idtipoingresso,imagemUrl,evento.artista,tipo.tipo,t.value,tipo.valor,(t.value * tipo.valor))"
+                              class="btn btn-success "><span class="fa fa-plus"></span></a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    
+
+    <div class="thumbnail">
+        <div class="row" >
+            <div class="col-md-12">
+              <h3 class="text-left" style="margin-left: 50px"> Informaçōes</h3>
+            </div>
+        </div>
+    
+        <hr />
+
+          <div class="row">
+              <div class="col-md-12">
+                <div class="container">
+                  <p class="text_white text-left" style="margin-left: 20px"> <i class="fa fa-map-marker text-justify" aria-hidden="true"></i> {{ evento.local }}</p>
+                  <p class="text_white text-left" style="margin-left: 20px" > 
+                    <i class="fa fa-calendar text-justify" aria-hidden="true"></i> Data do evento: {{ evento.data | date:'dd/MM/yy HH:mm' }}
+                  </p>
+                  <!--<p class="text-justify" style="margin-bottom:40px;">{{ evento.descricao }}</p>-->
+                </div>
+              </div>
+          </div>
+
+          <div class="row" >
+              <div class="col-md-12">
+                <h3 class="text-left" style="margin-left: 50px"> Localização </h3>
+              </div>
+          </div>
+      
+          <hr />
+
+          <div class="row" style="margin-bottom:40px; margin:auto auto">
+              <div class="col-md-12">
+                <div class="container">
+                    <agm-map [latitude]="evento.latitude" [longitude]="evento.longitude" [zoom]="15">
+                        <agm-marker [latitude]="evento.latitude" [longitude]="evento.longitude"></agm-marker>
+                    </agm-map>
+                </div>
+              </div>
+          </div>
+    </div>
+
+  </div>
+
+
+  
+  <app-rodape></app-rodape>

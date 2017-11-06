@@ -1,3 +1,4 @@
+<app-topo></app-topo>
 <div class="container container-bg-black">
         <div class="row text-center">
             <div class="col-md-3 col-sm-6" *ngFor="let evento of eventos">
@@ -9,12 +10,12 @@
                     <div class="caption">
                         <p class="text-left"><i class="fa fa-calendar text-justify" aria-hidden="true"></i> {{evento.data | date:'MMM d/y HH:mm'}} </p>
                         <p class="text-left"><i class="fa fa-map-marker text-justify" aria-hidden="true"></i> {{evento.local}} </p>
-                        <a  class=" btn btn-success btn-outline">Detalhes &raquo;</a>
+                        <a  [routerLink]="['/detalhe/',evento.idevento]" class=" btn btn-success btn-outline">Detalhes &raquo;</a>
                     </div>
                 </div>
             </div>
-  
         </div>      
 </div>
+<app-rodape></app-rodape>
 
 
